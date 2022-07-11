@@ -2,7 +2,7 @@ from flask import Flask, request
 
 from fifo_lifo import Stock
 
-stock_1 = Stock("lifo")
+stock_1 = Stock("fifo")
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def start_page():
         <html>
             <body>
                 <h3>Регистрация прошения</h2>
-                    <form action='/request/donation' method='get'>
+                    <form action='/request/donation' method='post'>
                     <button type="submit">Попросить</button>
                 </form><br><br>
                 <h3>Регистрация пожертвования</h3>
@@ -29,7 +29,7 @@ def start_page():
         '''
 
 
-@app.route('/request/donation', methods=['GET'])
+@app.route('/request/donation', methods=['POST'])
 def gift_page():
     return f'''
             <html>

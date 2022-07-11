@@ -31,7 +31,7 @@ class Stock:
             data_base.insert(0, {"name": name, "amount": amount})
 
         writing_reading(data_base)
-        return (data_base)
+
 
     def gift(self):
         if data_base == []:
