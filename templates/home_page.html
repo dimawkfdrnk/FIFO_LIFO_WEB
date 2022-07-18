@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+start-page
+{% endblock %}
+{% block body %}
+<br><h3>Регистрация прошения</h3>
+<form action='/request/donation' method='post'>
+    <br>
+    <button type="submit" class="btn btn-primary">Попросить</button>
+</form>
+<br><br>
+<h3>Регистрация пожертвования</h3><br>
+<form action='/donate' method='post'>
+    <label for="name" class="h6">Что жертвуете?</label>
+    <p><input type='text' class="col-sm-2 col-form-label" name="name" id="name">
+    </p>
+    <label for="amount" class="h6">Сколько?</label>
+    <p><input type='number' class="col-sm-2 col-form-label" name="amount" id="amount">
+    </p>
+    <button type="submit" class="btn btn-primary">Пожертвовать</button>
+</form>
+{% endblock %}
+
