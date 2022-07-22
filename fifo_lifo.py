@@ -1,6 +1,5 @@
 import json
 
-
 def writing_reading(data_base):
     if data_base == "open":
         with open('E:\Python\Учеба\home works\home-work-16\data.json', 'r') as data:
@@ -31,7 +30,6 @@ class Stock:
             data_base.insert(0, {"name": name, "amount": amount})
 
         writing_reading(data_base)
-        return (data_base)
 
     def gift(self):
         if data_base == []:
